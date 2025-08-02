@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-ydb" %}
-{% set version = "2.2.1" %}
+{% set version = "2.2.2" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_ydb-{{ version }}.tar.gz
-  sha256: 2399e29ac3a843d14577c1719687f688722aadd5ce939f1db801e400e6f76756
+  sha256: a2f8c1f829750e8a6933cd2239931c2c2465d79f888427d196e8359f1a35c846
 
 build:
   noarch: python
