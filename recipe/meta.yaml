@@ -1,6 +1,5 @@
 {% set name = "apache-airflow-providers-ydb" %}
-{% set version = "2.2.2" %}
-{% set python_min = "3.10" %}
+{% set version = "2.2.3" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_ydb-{{ version }}.tar.gz
-  sha256: a2f8c1f829750e8a6933cd2239931c2c2465d79f888427d196e8359f1a35c846
+  sha256: 9cb3eeb993c2512b29c735865308132a26ee8aef418e49f22e5cc968f8997ced
 
 build:
   noarch: python
@@ -23,8 +22,11 @@ requirements:
   run:
     - python >={{ python_min }},<3.13
     - apache-airflow >=2.10.0
+    # more restrictive for python <3.13
     - apache-airflow-providers-common-sql >=1.20.0
+    # more restrictive for python <3.13
     - ydb >=3.18.8
+    # more restrictive for python <3.13
     - ydb-dbapi >=0.1.0
 
 test:
@@ -40,7 +42,9 @@ about:
   home: https://github.com/apache/airflow/
   summary: Provider package apache-airflow-providers-ydb for Apache Airflow
   license: Apache-2.0
-  license_file: src/airflow/providers/ydb/LICENSE
+  license_file:
+    - LICENSE
+    - NOTICE
   license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-ydb/stable/index.html
   dev_url: https://github.com/apache/airflow/
