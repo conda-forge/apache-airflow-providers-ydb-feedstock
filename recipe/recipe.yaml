@@ -30,7 +30,6 @@ requirements:
     - ydb >=3.18.8
     # more restrictive for python <3.13
     - ydb-dbapi >=0.1.0
-
 tests:
   - python:
       imports:
