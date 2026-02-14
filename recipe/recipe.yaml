@@ -24,12 +24,10 @@ requirements:
     - python >=${{ python_min }}
     - apache-airflow >=2.11.0
     - apache-airflow-providers-common-compat >=1.10.1
-    # more restrictive for python <3.13
     - apache-airflow-providers-common-sql >=1.20.0
-    # more restrictive for python <3.13
     - ydb >=3.18.8
-    # more restrictive for python <3.13
     - ydb-dbapi >=0.1.0
+
 tests:
   - python:
       imports:
