@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-ydb
-  version: "2.5.0"
+  version: "2.5.1"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_ydb-${{ version }}.tar.gz
-  sha256: d1a9cc49c6bd146d9362a564a512dfdb427e2b2eb0258c272415afe8f310d821
+  sha256: a25c2f8782377cb50ca2287f301346f9e0646f7f1ed4013d14526e739a24cc29
 
 build:
   noarch: python
